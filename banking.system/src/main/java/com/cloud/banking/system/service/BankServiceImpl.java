@@ -53,7 +53,7 @@ public class BankServiceImpl implements BankService {
 	 * @param bankId
 	 * @return Bank Object
 	  */
-	@Cacheable(value="userCache",key="#bankId")
+	@Cacheable(value="userCache",key="#bankId")//userCache name of cache created in ehcache.xml 
 	@Override
 	public Bank findBankById(Integer bankId) throws BankException{
 		System.out.println("In Service method");
